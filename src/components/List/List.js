@@ -1,9 +1,13 @@
-function List({ studentName, studentAge }) {
+function List({ list }) {
   return (
     <ul>
-      <li>
-        {studentName} - {studentAge}
-      </li>
+      {list.map(({ name, age }) => {
+        return (
+          <li>
+            {name} - {age}
+          </li>
+        )
+      })}
     </ul>
   )
 }
